@@ -5,12 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.largeger</groupId>
-    <artifactId>cegos-java-3</artifactId>
+    <artifactId>day1-maven-testing</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>day1-maven-testing</module>
-    </modules>
+
 
     <properties>
         <maven.compiler.source>20</maven.compiler.source>
