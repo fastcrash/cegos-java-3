@@ -1,6 +1,5 @@
 package org.largeger.maven.exercises;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.*;
 
 import java.util.*;
@@ -67,7 +66,7 @@ public class TierheimKloninatorLoesung {
         }
 
         // Bonus: Suche Hund namens Bello
-        Optional<Tier> gefunden = Optional.fromNullable(
+        Optional<Tier> gefunden = Optional.ofNullable(
                 Iterables.find(tiere, t -> t.art == Tierart.DOG && t.name.contains("Bello"), null)
         );
         if (gefunden.isPresent()) {
@@ -76,7 +75,6 @@ public class TierheimKloninatorLoesung {
             System.out.println("❌ Kein Hund namens Bello gefunden.");
         }
     }
-
     private static List<Tier> generiereZufallsTiere(int anzahl) {
         String[] namen = {"Bello", "Miezi", "Rex", "Hoppel", "Kiki", "Mauzi", "Wuschel", "Spike", "Nemo", "Flauschi"};
         List<Tier> liste = new ArrayList<>();
