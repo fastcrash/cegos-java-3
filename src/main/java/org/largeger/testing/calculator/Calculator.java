@@ -24,6 +24,10 @@ public class Calculator {
     }
 
     public void divided(int value)  {
-        result /= value;
+        if (value == 0) {
+            this.result = 0;
+        } else {
+            result /= value;
+        }
     }
 }
