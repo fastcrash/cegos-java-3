@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Person bearbeiten</title></head>
+<body>
+<h1>Person bearbeiten</h1>
+<form action="/save" method="post" th:object="${person}">
+    <input type="hidden" th:field="*{id}"/>
+    <label>Vorname: <input th:field="*{vorname}" /></label><br/>
+    <label>Nachname: <input th:field="*{nachname}" /></label><br/>
+    <button type="submit">Speichern</button>
+</form>
+</body>
+</html>

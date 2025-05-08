@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Personenliste</title>
+</head>
+<body>
+<h1>Personen</h1>
+
+<!-- Formular zum Hinzufügen einer neuen Person -->
+<h2>Neue Person hinzufügen</h2>
+<form action="/save" method="post" th:object="${neuePerson}">
+    <label>Vorname: <input type="text" th:field="*{vorname}" /></label><br/>
+    <label>Nachname: <input type="text" th:field="*{nachname}" /></label><br/>
+    <button type="submit">Hinzufügen</button>
+</form>
+
+<!-- Liste der vorhandenen Personen -->
+<h2>Bestehende Personen</h2>
+<table>
+    <tr><th>ID</th><th>Vorname</th><th>Nachname</th><th>Aktion</th></tr>
+    <tr th:each="person : ${personen}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.vorname}"></td>
+        <td th:text="${person.nachname}"></td>
+        <td><a th:href="@{|/edit/${person.id}|}">Bearbeiten</a></td>
+    </tr>
+</table>
+</body>
+</html>
